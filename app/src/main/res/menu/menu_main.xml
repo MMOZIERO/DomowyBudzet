@@ -1,0 +1,50 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="dziennik.domowybudzet.MainActivity">
+    <item
+        android:id="@+id/action_settings"
+        android:orderInCategory="100"
+        android:title="@string/action_settings"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/dodaj_wydatek"
+        android:orderInCategory="100"
+        android:title="@string/title_activity_dodaj_wydatek"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/edytuj_wydatek"
+        android:orderInCategory="100"
+        android:title="@string/title_activity_edytuj_wydatek"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/usun_wydatek"
+        android:orderInCategory="100"
+        android:title="@string/title_activity_usun_wydatek"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/historia"
+        android:orderInCategory="100"
+        android:title="@string/title_activity_historia_wydatkow"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/statystyki"
+        android:orderInCategory="100"
+        android:title="@string/title_activity_statystyki"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/kopia"
+        android:orderInCategory="100"
+        android:title="@string/title_activity_kopia"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/ustawienia"
+        android:orderInCategory="100"
+        android:title="@string/title_activity_ustawienia"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/autorzy"
+        android:orderInCategory="100"
+        android:title="@string/title_activity_autorzy"
+        app:showAsAction="never" />
+</menu>

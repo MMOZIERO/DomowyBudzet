@@ -8,27 +8,56 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity">
-
-
-        </activity>
-
-        <activity android:name=".SplashScreen">
-
-
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-
-
-
-        </activity><!-- ATTENTION: This was auto-generated to add Google Play services to your project for
-     App Indexing.  See https://g.co/AppIndexing/AndroidStudio for more information. -->
+        </activity>
+        <!--
+ ATTENTION: This was auto-generated to add Google Play services to your project for
+     App Indexing.  See https://g.co/AppIndexing/AndroidStudio for more information.
+        -->
         <meta-data
             android:name="com.google.android.gms.version"
             android:value="@integer/google_play_services_version" />
+
+        <activity
+            android:name=".DodajWydatek"
+            android:label="@string/title_activity_dodaj_wydatek"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".UsunWydatek"
+            android:label="@string/title_activity_usun_wydatek"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".EdytujWydatek"
+            android:label="@string/title_activity_edytuj_wydatek"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".HistoriaWydatkow"
+            android:label="@string/title_activity_historia_wydatkow"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Statystyki"
+            android:label="@string/title_activity_statystyki"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Kopia"
+            android:label="@string/title_activity_kopia"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Ustawienia"
+            android:label="@string/title_activity_ustawienia"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Autorzy"
+            android:label="@string/title_activity_autorzy"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 
 </manifest>
