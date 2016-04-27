@@ -12,8 +12,8 @@
     tools:context="dziennik.domowybudzet.MainActivity"
     tools:showIn="@layout/activity_main">
 
-    <TextView
+    <TextViewgit 
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!" />
+        android:text="Witaj w aplikacji Domowy Budżet!" />
 </RelativeLayout>

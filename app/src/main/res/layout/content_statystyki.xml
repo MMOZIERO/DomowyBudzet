@@ -12,48 +12,32 @@
     tools:context="dziennik.domowybudzet.MainActivity"
     tools:showIn="@layout/activity_statystyki">
 
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/editText"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentLeft="true"
-        android:layout_marginTop="67dp"
-        android:layout_alignParentRight="true" />
-
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/editText2"
-        android:layout_centerVertical="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignRight="@+id/editText" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="Nazwa wydatku:"
-        android:id="@+id/textView2"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="Wartość wydatku:"
+        android:text="Statystyki"
         android:id="@+id/textView3"
         android:layout_below="@+id/editText"
         android:layout_centerHorizontal="true" />
+
+    <GridView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/gridView"
+        android:layout_below="@+id/textView3"
+        android:layout_above="@+id/button"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/title_activity_statystyki"
         android:id="@+id/button"
-        android:layout_below="@+id/editText2"
-        android:layout_marginTop="64dp"
-        android:layout_alignLeft="@+id/textView3"
-        android:layout_alignRight="@+id/textView3" />
+        android:layout_alignParentBottom="true"
+        android:layout_alignLeft="@+id/gridView"
+        android:layout_alignStart="@+id/gridView"
+        android:layout_marginBottom="67dp" />
 </RelativeLayout>
