@@ -73,7 +73,7 @@ public class MySQLite extends
         SQLiteDatabase db =
                 this.getWritableDatabase();
         Cursor cursor = db.query("wydatki", //a. table name
-                new String[]{"_id", "kwota", "data"}, //b.column names
+                new String[]{"id", "kwota", "data"}, //b.column names
                 " id = ?",//c.selections
                 new String[]{
                         String.valueOf(id)}, //d. sel args
