@@ -35,9 +35,11 @@ public class SplashScreen extends AppCompatActivity {
         }
 
 
-       animate();
 
-        // Start the animation (looped playback by default).
+        final ImageView img = (ImageView) findViewById(R.id.imageView);
+        img.setBackgroundResource(R.drawable.db_2);
+
+
 
         new Handler().postDelayed(new Runnable(){
             @Override
@@ -47,22 +49,12 @@ public class SplashScreen extends AppCompatActivity {
 
                 SplashScreen.this.finish();
             }
-        },3000);
+        },2000);
 
     }
 
 
-    private void animate(){
-        setContentView(R.layout.activity_splash_screen);
 
-        final ImageView img = (ImageView) findViewById(R.id.imageView);
-        img.setBackgroundResource(R.drawable.splash_animation);
-
-        // Get the background, which has been compiled to an AnimationDrawable object.
-
-        final AnimationDrawable frameAnimation = (AnimationDrawable) img.getBackground();
-        frameAnimation.start();
-    }
 
     private void hideSystemUI() {
         // Set the IMMERSIVE flag.
