@@ -5,7 +5,7 @@
         android:icon="@drawable/plusik2"
         android:title="Dodaj"
         app:showAsAction="ifRoom|collapseActionView"
-
+        android:onClick="nowyWpis"
         />
     <item android:id="@+id/help"
         android:icon="@drawable/aparat"

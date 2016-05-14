@@ -2,30 +2,64 @@ package dziennik.domowybudzet;
 
 import android.content.Intent;
 import android.graphics.Bitmap;
+import android.net.Uri;
 import android.provider.MediaStore;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Button;
+import android.widget.ArrayAdapter;
+import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.Spinner;
+
+import com.google.android.gms.appindexing.Action;
+import com.google.android.gms.appindexing.AppIndex;
+import com.google.android.gms.common.api.GoogleApiClient;
 
 public class Add extends AppCompatActivity {
 
     ImageView mImageView;
+    private int modyfi_id;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add);
-
-        mImageView=(ImageView) findViewById(R.id.imageView2);
-
-        final Button button = (Button) findViewById(R.id.buttonParagon);
-        button.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
-                dispatchTakePictureIntent();
+        ArrayAdapter kategorie = new ArrayAdapter(this, android.R.layout.simple_spinner_dropdown_item, new String[]{"Dom", "Nauka", "Motoryzacja"});
+        Spinner kategoria = (Spinner) findViewById(R.id.spinner);
+        kategoria.setAdapter(kategorie);
+        Bundle extras = getIntent().getExtras();
+        try {
+            if (extras.getSerializable("element") != null) {
+                Wydatek item = (Wydatek) extras.getSerializable("element");
+                EditText nazwa = (EditText) findViewById(R.id.editText1);
+                EditText kwota = (EditText) findViewById(R.id.editText2);
+                EditText data = (EditText) findViewById(R.id.editText3);
+                nazwa.setText(item.getNazwa());
+                kwota.setText(Float.toString(item.getKwota()));
+                data.setText(item.getData());
+                this.modyfi_id = item.getId();
             }
-        });
+        } catch (Exception ex) {
+            this.modyfi_id = 0;
+        }
+
+
+    }
+
+    public void wyslij(View view) {
+        EditText nazwa = (EditText) findViewById(R.id.editText1);
+        EditText data = (EditText) findViewById(R.id.editText3);
+        EditText kwota = (EditText) findViewById(R.id.editText2);
+
+        Spinner kategoria = (Spinner) findViewById(R.id.spinner);
+        Wydatek item = new Wydatek(nazwa.getText().toString(), Float.valueOf(kwota.getText().toString()), data.getText().toString(), kategoria.getSelectedItem().toString());
+        item.setId(this.modyfi_id);
+        Intent intencja = new Intent();
+        intencja.putExtra("nowy", item);
+        setResult(RESULT_OK, intencja);
+        finish();
     }
 
 
@@ -39,14 +73,8 @@ public class Add extends AppCompatActivity {
     }
 
 
-    @Override
-    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-        if (requestCode == REQUEST_IMAGE_CAPTURE && resultCode == RESULT_OK) {
-            Bundle extras = data.getExtras();
-            Bitmap imageBitmap = (Bitmap) extras.get("data");
-            mImageView.setImageBitmap(imageBitmap);
-        }
-    }
+
+
 
 
 }
