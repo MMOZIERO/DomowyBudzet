@@ -31,7 +31,12 @@
         <activity
             android:name=".Add"
             android:label="Dodaj wydatek"></activity>
-        <activity android:name=".Stats"></activity>
+        <activity
+            android:name=".Stats"
+            android:label="Statystyki"></activity>
+        <activity
+            android:name=".WydatkiKategorie"
+            android:label="Wydatki według kategorii"></activity>
     </application>
 
 </manifest>

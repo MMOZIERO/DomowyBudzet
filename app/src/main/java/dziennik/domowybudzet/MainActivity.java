@@ -110,4 +110,9 @@ public class MainActivity extends AppCompatActivity {
         Intent intencja = new Intent(this, Add.class);
         startActivityForResult(intencja, 1);
     }
+
+    public void podsumuj(View view) {
+        Intent intencja = new Intent(this, Stats.class);
+        startActivityForResult(intencja, 1);
+    }
 }

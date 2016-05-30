@@ -79,6 +79,11 @@ public class MySQLite extends SQLiteOpenHelper {
         return element;
     }
 
+    public Cursor kategorie(String kategoria) {
+        SQLiteDatabase db = this.getReadableDatabase();
+        return db.rawQuery("Select sum(kwota) from wydatki where kategoria=?", new String[]{kategoria});
+    }
+
     public Cursor lista() {
         SQLiteDatabase db = this.getReadableDatabase();
         return db.rawQuery("Select * from wydatki", null);
