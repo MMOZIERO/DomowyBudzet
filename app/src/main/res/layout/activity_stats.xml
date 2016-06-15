@@ -9,12 +9,194 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="dziennik.domowybudzet.Stats">
 
-    <Button
+    <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Wydatki według kategorii"
-        android:id="@+id/button4"
-        android:onClick="kategorie"
+        android:text="Twoje wydatki"
+        android:id="@+id/data"
+        android:textSize="25dp"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@android:color/darker_gray"
+        android:layout_below="@+id/data"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:id="@+id/view" />
+
+    <ImageView
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:id="@+id/imageEweryday"
+        android:src="@drawable/everyday"
+        android:layout_below="@+id/view"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="20dp" />
+
+
+    <ImageView
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:id="@+id/imageTransport"
+        android:src="@drawable/transport"
+        android:layout_alignTop="@+id/imageEweryday"
+        android:layout_alignRight="@+id/data"
+        android:layout_alignEnd="@+id/data" />
+
+    <ImageView
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:id="@+id/imageFun"
+        android:src="@drawable/fun"
+        android:layout_alignTop="@+id/imageMedia"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <ImageView
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:id="@+id/imageMedia"
+        android:src="@drawable/media"
+        android:layout_marginTop="27dp"
+        android:layout_below="@+id/imageTransport"
+        android:layout_toLeftOf="@+id/textTransport"
+        android:layout_toStartOf="@+id/textTransport" />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="128,56 zł"
+        android:id="@+id/textEveryday"
+        android:textSize="15dp"
+        android:layout_marginTop="24dp"
+        android:layout_alignTop="@+id/imageEweryday"
+        android:layout_alignLeft="@+id/data"
+        android:layout_alignStart="@+id/data"
+        android:layout_marginLeft="-12dp" />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="128,56 zł"
+        android:id="@+id/textTransport"
+        android:textSize="15dp"
+        android:layout_alignTop="@+id/textEveryday"
+        android:layout_toRightOf="@+id/imageTransport"
+        android:layout_toEndOf="@+id/imageTransport"
+        android:layout_marginLeft="12dp" />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="128,56 zł"
+        android:id="@+id/textFun"
+        android:textSize="15dp"
+        android:layout_alignTop="@+id/imageFun"
+        android:layout_alignLeft="@+id/textEveryday"
+        android:layout_alignStart="@+id/textEveryday"
+        android:layout_marginTop="23dp" />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="128,56 zł"
+        android:id="@+id/textMedia"
+        android:textSize="15dp"
+        android:layout_alignTop="@+id/textFun"
+        android:layout_alignLeft="@+id/textTransport"
+        android:layout_alignStart="@+id/textTransport" />
+
+    <ImageView
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:id="@+id/imageHealth"
+        android:src="@drawable/health"
+        android:layout_marginTop="28dp"
+        android:layout_below="@+id/imageFun"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="128,56 zł"
+        android:id="@+id/textHealth"
+        android:textSize="15dp"
+        android:layout_gravity="bottom|right"
+        android:layout_alignLeft="@+id/textFun"
+        android:layout_alignStart="@+id/textFun"
+        android:layout_alignTop="@+id/imageHealth"
+        android:layout_marginTop="23dp" />
+
+
+    <ImageView
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:id="@+id/imageMix"
+        android:src="@drawable/rozne"
+        android:layout_alignTop="@+id/imageHealth"
+        android:layout_alignLeft="@+id/imageMedia"
+        android:layout_alignStart="@+id/imageMedia" />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="128,56 zł"
+        android:id="@+id/textMix"
+        android:textSize="15dp"
+        android:layout_gravity="bottom|right"
+        android:layout_alignTop="@+id/textHealth"
+        android:layout_alignRight="@+id/textWydatki"
+        android:layout_alignEnd="@+id/textWydatki" />
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@android:color/darker_gray"
+        android:id="@+id/view2"
+        android:layout_marginTop="29dp"
+        android:layout_below="@+id/imageHealth"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="wydatki"
+        android:id="@+id/textView"
+        android:layout_below="@+id/view2"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:textSize="18dp"
+        android:layout_marginTop="20dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="569.00"
+        android:id="@+id/textWydatki"
+        android:layout_alignBottom="@+id/textView"
+        android:layout_alignRight="@+id/textMedia"
+        android:layout_alignEnd="@+id/textMedia"
+        android:textSize="18dp" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@android:color/darker_gray"
+        android:id="@+id/view4"
+        android:layout_below="@+id/textView"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="10dp" />
+
 </RelativeLayout>

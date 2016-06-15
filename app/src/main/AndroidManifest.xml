@@ -34,9 +34,6 @@
         <activity
             android:name=".Stats"
             android:label="Statystyki"></activity>
-        <activity
-            android:name=".WydatkiKategorie"
-            android:label="Wydatki według kategorii"></activity>
     </application>
 
 </manifest>

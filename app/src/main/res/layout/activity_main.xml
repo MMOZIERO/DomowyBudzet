@@ -19,15 +19,36 @@
         android:layout_centerHorizontal="true"
         android:layout_alignParentTop="true" />
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Podsumuj"
-        android:id="@+id/button3"
+
+    <ImageView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@drawable/stats"
+        android:id="@+id/stat"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
         android:layout_alignParentBottom="true"
         android:layout_alignRight="@+id/listView"
         android:layout_alignEnd="@+id/listView"
-        android:onClick="podsumuj"/>
+        android:layout_marginBottom="30dp"
+        android:onClick="podsumuj"
+
+
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Statystyki"
+        android:id="@+id/textstat"
+        android:textSize="15dp"
+        android:layout_alignTop="@+id/stat"
+
+        android:layout_marginLeft="132dp"
+        android:layout_marginTop="93dp"/>
+
+
+
 </RelativeLayout>
 
 

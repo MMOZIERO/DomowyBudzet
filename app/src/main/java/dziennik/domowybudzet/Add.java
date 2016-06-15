@@ -30,7 +30,7 @@ public class Add extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add);
-        ArrayAdapter kategorie = new ArrayAdapter(this, android.R.layout.simple_spinner_dropdown_item, new String[]{"Dom", "Nauka", "Motoryzacja"});
+        ArrayAdapter kategorie = new ArrayAdapter(this, android.R.layout.simple_spinner_dropdown_item, new String[]{"Jedzenie", "Motoryzacja","Rozrywka","Elektronika", "Zdrowie","Rozne"});
         Spinner kategoria = (Spinner) findViewById(R.id.spinner);
         mImageView=(ImageView) findViewById(R.id.imageView2);
         kategoria.setAdapter(kategorie);
